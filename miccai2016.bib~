@@ -1,0 +1,13 @@
+@comment{x-kbibtex-personnameformatting=<%l><, %f>}
+
+@article{pmid23281100,
+	author = "Younes, L. and Ratnanather, J. T. and Brown, T. and Aylward, E. and Nopoulos, P. and Johnson, H. and Magnotta, V. A. and Paulsen, J. S. and Margolis, R. L. and Albin, R. L. and Miller, M. I. and Ross, C. A.",
+	journal = "Hum Brain Mapp",
+	month = "Mar",
+	number = "3",
+	pages = "792--809",
+	title = "{{R}egionally selective atrophy of subcortical structures in prodromal {H}{D} as revealed by statistical shape analysis}",
+	volume = "35",
+	year = "2014"
+}
+

@@ -1,0 +1,88 @@
+\documentclass[10pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{algpseudocode}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{cite}
+
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+
+\begin{document}
+
+
+\title{Statistical Diffeomorphic Shape Trajectory Analysis on Prodomal Huntington Disease Progression}
+\author{Sungmin Hong, James Fishbaugh, Guido Gerig}
+\date{\today}
+\maketitle
+
+\section*{Introduction}
+
+% 
+% The statistical shape analysis is a critical and important tool to understand the correlation between disease progression and shape configuration of target anatomy.
+% Shape regression enables to induce temporal developement of the shapes when only a few observations 
+% can be captured by interpolating the shapes between the gaps of staggered observations \cite{Durrleman2013, Fishbaugh2013}.
+
+Huntington disease(HD) is a fatal neurodegenerative disorder which causes the deterioration of physical motor ability and cognitive decline~\cite{Paulson2011, Imarisio2008}. 
+The preferential subregions of the striatal complex, which is consisted of caudate, putamen and nucleus accumbens, degenerates as HD progresses~\cite{Ferrante1987a, Vonsattel1985}. 
+MacDonald et al. showed that a cytosine-adenine-guanine (CAG) repeat in the huntington protein caused HD and was also correlated with onset age of HD~\cite{MacDonald93}. 
+Based on the CAG repeat length, CAP (CAG-Age Product) score was suggested as a metric to index HD progression before onset and to classify them to the different risk groups, low, medium and high groups~\cite{Langbehn2010, Zhang2011}. 
+
+The most of the previous HD statistical studies of the neuronal degenration and the MRI observations 
+relied on the volumes of brain structures to show the correlation of the degeneration in 
+the striatal complex and the HD progression~\cite{Paulsen2014, Younes2014, Paulsen2014C}. 
+Although the statistical volume analysis showed promising results on the correlation of CAP scores and the degeneration of the striatal complex, 
+it suffered from large variance among different subjects~\cite{Paulsen2014C}. The large variance is caused by a few limitations of volume analysis.
+The volumes of a brain structure are only measured as a whole structure and not sensitive to subregion changes. 
+Also, each individual has different baseline structures, which means each individual has different brain structures which evolves in a different trajectory. 
+Follow-up observations at sparse and uneven time points also cause the large variance of volume based analyses.
+
+To overcome the limitations of volume analyses, Younes et al. suggested the statistical shape analysis to show the selective atrophy of the brain structures in the striatal complex 
+by building a template atlas of the structures and matching the observed shapes to the atlas~\cite{Younes2014}. 
+The atrophy was calculated by the deformation of the template to the observed shapes. The study showed the significant subregion atrophy in the striatal complex by ranking the calculated atrophy with CAP scores.
+However, the limitations of different individual baselines and sparse observations were not yet overcome. 
+Muralidharan et al. proposed the longitudinal shape analysis by shape regression method and linear mixed-effects model~\cite{Prasa2014}.
+Their work focused on the relationship between the whole shapes and risk groups. 
+
+In this study, we propose the framework to reveal the correlation between HD progression and the selective subregion degeneration 
+in the striatal complex by combining the diffeomorphic shape regression modeling~\cite{Fishbaugh2013} and the regression of the subregion changes on CAP score domain. 
+The shape regression model estimated on each individual subject will interpolate the shapes between the sparse observations in smooth and continuous flow of diffeomorphism.
+The correspondence of shapes among different subjects will be establshed in an anatomically plausible manner by evolving shapes from a convex ellipsoid to observed shapes.
+Based on the correspondence, a statistical regression model of the rate of shape changes will be estimated on each landmark point of the shapes on CAP score axis.
+The rate of shape changes is defined by a displacement vector for a fixed time interval. 
+The statistical significance of the shape deformation by hypothesis testing will show selective degeneration of the subregions on CAP score domain. 
+The proposed framework will not only show how the shape analysis improves the statistical significance of the HD progression analysis, 
+but also elaborate the analysis of the shape trajectory to the continuous temporal CAP score domain which has not been suggested in the previous researches. 
+
+% \section*{Methodology}
+% 
+% The proposed framework largely consisted of three parts. First, the diffeomorphic shape regression model is estimated on an individual subject's observed shapes. 
+% Typically, each individual has two to four observations with different time points. The continuous and smooth shape trajectory on consistent temporal age axis of an individual subject is estimated by the shape regression.
+% The correspondence of landmark points of the shapes among different subject is also established in this stage. 
+% The estimated displacement vector with respect to a fixed time interval at each landmark point with all subjects will 
+% be used as inputs for the statistical analysis at the landmark point to show how the shape changes with respect to CAP score. 
+% The statistical siginificance will be tested by the hypothesis testing to show which subregions have significant shape changes. 
+% 
+% \subsection*{Shape Regression on Individual Subject}
+% 
+% We will follow the diffeomorphic shape regression method suggested in \cite{Fishbaugh2013}. The diffeomorphic shape regression model has a few notable advantages for the statistical shape analysis. 
+% The spatial smoothness of estimated shapes will reduce external noises which might be generated from decimation or segmentation processes. 
+% Also the temporal smoothness guaranteed by diffeomorphic evolution of shapes keeps the displacement vectors in close time points to be continuous which is biologically expected.
+% The model 
+% 
+% 
+% \subsection*{Regression on Individual Subject}
+
+
+
+\bibliography{MICCAI2016_SungminHong}
+\bibliographystyle{plain}
+
+\end{document}
